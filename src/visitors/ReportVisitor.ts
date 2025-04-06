@@ -12,7 +12,8 @@ export class SimpleTextReportVisitor implements ReportVisitor {
 
 export class DetailedTextReportVisitor implements ReportVisitor {
   visitBacklogItem(item: BacklogItem): string {
-    return `Item: ${item.title} — Status: ${item.status.name} — Description: ${item.description}`;
+    const tasks = item.tasks.map(task => `- ${task.title}: ${task.description}`).join('\n');
+    return `Item: ${item.title} — Status: ${item.status.name} — Description: ${item.description}\nTasks:\n${tasks}`;
   }
 }
 
