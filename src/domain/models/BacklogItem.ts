@@ -11,7 +11,7 @@ export class BacklogItem {
     public sprintId: string,
     public title: string,
     public description: string,
-    public developer: string
+    public assignee: string
   ) {}
 
   addTask(task: Task) {
