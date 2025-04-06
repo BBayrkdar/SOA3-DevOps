@@ -27,7 +27,7 @@ jobs:
     #     if: success()
     #     run: echo "Integrate SonarCloud here if needed."
 
-      - name: Create release tag (simulatie)
+      - name: Create release tag (simulation)
         if: github.ref == 'refs/heads/main'
         run: echo "v1.0.0" > version.txt && git tag v1.0.0 || echo "Tagging failed"
         
