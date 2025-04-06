@@ -8,7 +8,7 @@ export class ReportService {
     return `Burndown: ${done}/${total} items completed.`;
   }
 
-  static generateItemsRaport(items: BacklogItem[], visitor: ReportVisitor): string[] {
+  static generateItemsReport(items: BacklogItem[], visitor: ReportVisitor): string[] {
     return items.map(item => visitor.visitBacklogItem(item));
   }
 
