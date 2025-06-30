@@ -5,7 +5,7 @@ import { Task } from '../domain/models/Task';
 
 test('should allow adding tasks to backlog item', () => {
   const item = new BacklogItem('1', 's1', 'Feature A', 'Desc', 'Dev');
-  const task = new Task('t1', item.id, 'Setup', 'Init');
+  const task = new Task('t1', item.id, '', 'Setup', 'Init');
   item.addTask(task);
   expect(item.tasks).toContain(task);
 });
